@@ -1,6 +1,6 @@
 {
   "name": "treslek-random",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A treslek plugin that provides RNG commands",
   "main": "index.js",
   "scripts": {
