@@ -60,6 +60,18 @@ Random.prototype.dice = function(bot, to, from, msg, callback) {
     return;
   }
 
+  if (dice[1] > 1000) {
+    bot.say(to, 'Whoops! I can only roll 1000 dice at a time.');
+    callback();
+    return;
+  }
+
+  if (dice[0] > 1000) {
+    bot.say(to, 'Whoops! A die with more than 1000 sides is to hard to read.');
+    callback();
+    return;
+  }
+
   for (ii = 0; ii < dice[0]; ii++) {
     roll += getRandom(1, dice[1]);
   }
